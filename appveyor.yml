@@ -1,0 +1,17 @@
+version: '{build}'
+
+image:
+  - Visual Studio 2013
+
+configuration:
+  - Release
+
+install:
+  - git submodule update --init --recursive
+
+build:
+  project: ClpInfo.sln
+
+artifacts:
+  - path: '%CONFIGURATION%\ClpInfo.exe'
+  - path: '%CONFIGURATION%\TestCpl.cpl'

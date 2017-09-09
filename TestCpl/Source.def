@@ -1,0 +1,3 @@
+LIBRARY TESTCPL.cpl
+EXPORTS
+	CplApplet	@1
