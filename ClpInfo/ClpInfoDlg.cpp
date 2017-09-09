@@ -128,10 +128,10 @@ void CClpInfoDlg::OnBnClickedButton1()
         ShowErrorMessage(_T("Cannot load library"), GetLastError());
         return;
     }
-    CplApplet addr = (CplApplet)GetProcAddress(h, "CplApplet");
+    CplApplet addr = (CplApplet)GetProcAddress(h, "CPlApplet");
     if (!addr)
     {
-        ShowErrorMessage(_T("Cannot find 'CplApplet' function"), GetLastError());
+        ShowErrorMessage(_T("Cannot find 'CPlApplet' function"), GetLastError());
         return;
     }
 

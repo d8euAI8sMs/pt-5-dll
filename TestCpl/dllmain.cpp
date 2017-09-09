@@ -18,7 +18,7 @@
 //	return TRUE;
 //}
 
-LONG WINAPI CplApplet(HWND hWnd, UINT uMsg, LPARAM param1, LPARAM param2)
+LONG WINAPI CPlApplet(HWND hWnd, UINT uMsg, LPARAM param1, LPARAM param2)
 {
     CPLINFO *i;
     switch (uMsg)
