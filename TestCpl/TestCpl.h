@@ -32,6 +32,16 @@ protected:
 protected:
 	HICON m_hIcon;
 	virtual BOOL OnInitDialog();
+public:
+    CString mWorkingDir;
+    CString mCmdLine;
+    CString mSysTime;
+    CString mLocalTime;
+    afx_msg void OnTimer(UINT_PTR nIDEvent);
+    CString mCpuBrand;
+    CString mTotalMemory;
+    DWORD mCores;
+    CString mUserName;
 };
 
 extern CTestCplApp theApp;
