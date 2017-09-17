@@ -1,6 +1,7 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "stdafx.h"
 #include "Resource.h"
+#include "TestCpl.h"
 
 //BOOL APIENTRY DllMain( HMODULE hModule,
 //                       DWORD  ul_reason_for_call,
@@ -17,6 +18,16 @@
 //	}
 //	return TRUE;
 //}
+
+void ShowSecondDialogItem()
+{
+    AFX_MANAGE_STATE(AfxGetStaticModuleState());
+    theApp.m_bInitialized = true;
+    if (theApp.InitInstance())
+    {
+        theApp.Run();
+    }
+}
 
 LONG WINAPI CPlApplet(HWND hWnd, UINT uMsg, LPARAM param1, LPARAM param2)
 {
@@ -54,7 +65,7 @@ LONG WINAPI CPlApplet(HWND hWnd, UINT uMsg, LPARAM param1, LPARAM param2)
             AfxMessageBox(_T("Some message from 1-st item"));
             return TRUE;
         case 1:
-            AfxMessageBox(_T("Some message from 2-st item"), MB_HELP);
+            ShowSecondDialogItem();
             return TRUE;
         default:
             return FALSE;
